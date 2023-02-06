@@ -1,0 +1,45 @@
+<section class="py-5">
+  <div class="container px-4 px-lg-5 mt-5">
+    <div
+      class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
+    >
+      <div class="col mb-5" *ngFor="let product of products">
+        <div class="card h-100 product">
+          <!-- Sale badge-->
+          <div
+            class="badge bg-dark text-white position-absolute"
+            style="top: 0.5rem; right: 0.5rem"
+          >
+            Sale
+          </div>
+          <!-- Product image-->
+          <a [routerLink]="['/', product._id]"
+            ><img
+              style="max-height: 360px"
+              class="card-img-top"
+              [src]="product.image"
+          /></a>
+          <!-- Product details-->
+          <div class="card-body p-4">
+            <div class="text-center">
+              <!-- Product name-->
+              <h5 class="fw-bolder">{{ product.title | lowercase }}</h5>
+              <!-- Product price-->
+              <span class="text-muted text-decoration-line-through">{{
+                product.Price | currency
+              }}</span>
+              <h3>{{ product.price - product.price * 0.3 | currency }}</h3>
+            </div>
+          </div>
+          <!-- Product actions-->
+          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <span><a class="btn btn-outline-dark mt-auto">Add to cart</a></span>
+            <span class="favorite"
+              ><img style="width: 30px" src="../../assets/favorite.png" alt=""
+            /></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
