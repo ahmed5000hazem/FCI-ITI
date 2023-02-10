@@ -1,0 +1,14 @@
+.cart-btn {
+  width: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 19px;
+}
+.cart-btn:hover {
+  background-color: var(--hover-color);
+  color: black;
+}
+.cart-btn span img {
+  width: 30px;
+}

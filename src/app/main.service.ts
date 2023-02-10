@@ -236,4 +236,25 @@ export class MainService {
     console.log(id);
     return this.http.get(`http://localhost:4000/product/${id}`);
   }
+
+  cartProducts: any[] = [];
+  addToCart(product: any) {
+    console.log('ADD To Cart ');
+    console.log(product);
+    product.Quantity = 1;
+    console.log(product);
+    if ('cartProducts' in localStorage) {
+      this.cartProducts = JSON.parse(localStorage.getItem('cartProducts')!);
+      let exist = this.cartProducts.find((item) => item._id == product._id);
+      if (exist) {
+        alert('Product is already in your cart');
+      } else {
+        this.cartProducts.push(product);
+        localStorage.setItem('cartProducts', JSON.stringify(this.cartProducts));
+      }
+    } else {
+      this.cartProducts.push(product);
+      localStorage.setItem('cartProducts', JSON.stringify(this.cartProducts));
+    }
+  }
 }

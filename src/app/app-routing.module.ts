@@ -7,6 +7,7 @@ import { ElectronicsComponent } from './electronics/electronics.component';
 import { DetailsComponent } from './details/details.component';
 import { FormComponent } from './form/form.component';
 import { TestAPIComponent } from './test-api/test-api.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: 'test',
     component: TestAPIComponent,
+  },
+  {
+    path: 'cart',
+    component: CartComponent,
   },
   {
     path: ':id',

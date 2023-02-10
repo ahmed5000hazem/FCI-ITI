@@ -1,5 +1,5 @@
 <div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixedHeader">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixedHeader header">
     <div class="container px-4 px-lg-5">
       <a class="navbar-brand" routerLink="/">Shop_Home</a>
       <button
@@ -35,24 +35,14 @@
           </li>
         </ul>
         <form class="d-flex">
-          <button class="btn btn-outline-dark" type="submit" routerLink="/cart">
-            <i class="bi-cart-fill me-1"></i>
-            Cart
-            <!-- <span class="badge bg-dark text-white ms-1 rounded-pill" ></span> -->
-          </button>
-          <button
-            style="margin-left: 15px"
-            class="btn btn-outline-dark"
+          <a
+            class="btn btn-outline-dark cart-btn"
             type="submit"
-            routerLink="/favorite"
+            routerLink="/cart"
           >
-            <img
-              style="width: 20px"
-              src="https://cdn-icons-png.flaticon.com/512/8152/8152874.png"
-              alt=""
-            />
-            Favorites
-          </button>
+            <span><img src="../assets/shopping-cart.png" alt="" /></span>
+            Cart
+          </a>
         </form>
       </div>
     </div>

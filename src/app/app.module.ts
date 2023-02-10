@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
 import { FormComponent } from './form/form.component';
 import { TestAPIComponent } from './test-api/test-api.component';
+import { CartComponent } from './cart/cart.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,8 +25,9 @@ import { TestAPIComponent } from './test-api/test-api.component';
     DetailsComponent,
     FormComponent,
     TestAPIComponent,
+    CartComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

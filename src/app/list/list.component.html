@@ -33,10 +33,14 @@
           </div>
           <!-- Product actions-->
           <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-            <span><a class="btn btn-outline-dark mt-auto">Add to cart</a></span>
-            <span class="favorite"
-              ><img style="width: 30px" src="../../assets/favorite.png" alt=""
-            /></span>
+            <button
+              (click)="addToCart(product)"
+              class="btn btn-outline-dark cart-btn"
+              type="submit"
+            >
+              <span><img src="../assets/shopping-cart.png" alt="" /></span>
+              Add To Cart
+            </button>
           </div>
         </div>
       </div>

@@ -1,5 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
+:root {
+  --hover-color: #7a808675;
+}
+
+a {
+  text-decoration: none;
+}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+}
 
 .product {
   transition: all 0.3s ease;

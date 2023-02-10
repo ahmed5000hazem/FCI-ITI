@@ -16,4 +16,8 @@ export class ListComponent implements OnInit {
 
     // this.products = this.mainService.allProducts;
   }
+
+  addToCart(product: any) {
+    this.mainService.addToCart(product);
+  }
 }
