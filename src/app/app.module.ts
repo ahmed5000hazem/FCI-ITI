@@ -13,6 +13,7 @@ import { FormComponent } from './form/form.component';
 import { TestAPIComponent } from './test-api/test-api.component';
 import { CartComponent } from './cart/cart.component';
 import { FormsModule } from '@angular/forms';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { FormsModule } from '@angular/forms';
     TestAPIComponent,
     CartComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, CarouselModule],
   providers: [],
   bootstrap: [AppComponent],
 })
