@@ -3,7 +3,7 @@ import { MainService } from '../main.service';
 @Component({
   selector: 'app-women',
   templateUrl: './women.component.html',
-  styleUrls: ['./women.component.css'],
+  styleUrls: ['./women.component.scss'],
 })
 export class WomenComponent implements OnInit {
   products: any[] = [];
