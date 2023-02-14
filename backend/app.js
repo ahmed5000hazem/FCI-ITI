@@ -62,13 +62,23 @@ app.get("/women", function (reg, res) {
 });
 
 app.get("/product/:id", function (req, res) {
-  let url = req.url;
-  let id = url.split("/");
-  const query = { _id: id[2] };
+  
+  var product = { _id: req.params.id };
+  Products.findOne(product).then( (data) => {
+    this.product = data
+    var relative = { $and: [ { category: this.product.category }, { _id : { $ne: this.product._id } } ] };
+    Products.find(relative).then( (data) => this.relative = data );
+  } );
+  
 
-  Products.findOne(query).then((data) => {
-    res.send(data);
-  });
+  product = this.product
+  relative = this.relative
+  let data = {
+    product,
+    relative
+  }
+
+  res.send(data);
 });
 
 const allProducts = [

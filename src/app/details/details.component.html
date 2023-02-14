@@ -55,3 +55,13 @@
     </div>
   </div>
 </section>
+<div class="mb-5 d-flex justify-content-center">
+  <h3 class="text-center border-bottom border-2 pb-3" style="width: fit-content;">Realtive Products</h3>
+</div>
+<owl-carousel-o [options]="customOptions">
+  <ng-container *ngFor="let slide of relativeProducts">
+      <ng-template carouselSlide [id]="slide._id" class="slide">
+          <img [src]="slide.image" class="image" [alt]="slide.alt" [title]="slide.title" />
+      </ng-template>
+  </ng-container>
+</owl-carousel-o>
